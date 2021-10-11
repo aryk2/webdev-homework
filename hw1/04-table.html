@@ -8,11 +8,47 @@
     <!-- <link rel="stylesheet" href="../styles.css" />
     <link rel="stylesheet" href="../hw2/04-table.css" /> -->
   </head>
+  <style>
+    table, th, td {
+      border: 1px solid black;
+    }
+    .label {
+      font-weight: bold
+    }
+  </style>
   <body>
     <main>
       <h1>Table</h1>
       <table>
-        <!-- Add your code here -->
+        <table>
+          <tr>
+            <td class="label">Time / Channels</td>
+            <td class="label">8:00 PM</td>
+            <td class="label">9:00 PM</td>
+            <td class="label">10:00 PM</td>
+          </tr>
+          <tr>
+            <td class="label">ABC</td>
+            <td>The Goldbergs</td>
+            <td>Home Economics</td>
+            <td>black-ish</td>
+          </tr>
+          <tr>
+            <td class="label">CBS</td>
+            <td>Young Sheldon</td>
+            <td>United States If Al</td>
+            <td>Mom</td>
+          </tr>
+          <tr>
+            <td class="label">NBC</td>
+            <td colspan="3">Stanley Cup Playoffs</td>
+          </tr>
+          <tr>
+            <td class="label">Fox</td>
+            <td>Beat Shazam</td>
+            <td colspan="2">Local Programming</td>
+          </tr>
+        </table>
       </table>
     </main>
   </body>
