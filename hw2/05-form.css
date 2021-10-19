@@ -1,14 +1,46 @@
 .form {
+    border: 1px solid black;
+    max-width: 500px;
 }
 
 .form-element {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    margin: .5rem;
+}
+
+.label {
+    font-weight: bold;
+    width: 100px
+}
+
+.title {
+    padding-top: 25px;
+    font-weight: bold;
+}
+
+.field {
+    width: 250px
 }
 
 .btn {
+    width: 190px;
+    
 }
 
 .btn-primary {
+    background-color: green;
+    color: white;
 }
 
 .btn-secondary {
+    background-color: white;
+    color: black
+
+}
+
+.btn:hover {
+    background-color: orange;
+    color: black
 }

@@ -3,10 +3,22 @@ body {
 }
 
 .nav-list {
+  display: flex;
+  flex-direction: row;
 }
 
 .list-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 80px;
+  background-color: green;
+  color: white;
 }
 
-.nav-link {
+.list-item:hover {
+  background-color: orange;
+  color: black;
+
 }

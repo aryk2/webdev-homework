@@ -2,10 +2,30 @@
   --lightorange: rgba(255, 165, 0, 0.1);
 }
 
+table, th, td {
+  border: 1px solid black;
+}
+
+td {
+  justify-content: center;
+  text-align: center;
+  height: 60px;
+  width: 250px;
+}
+
+.label {
+  font-weight: bold
+}
+
+tr:hover {
+  background-color: rgb(235, 213, 185);
+}
+
 .table-heading {
-  /* use green and white for the colors - these colors are defined in the styles.css file */
+  background-color: green;
 }
 
 .channel {
-  /* use orange and black for the colors - these colors are defined in the styles.css file */
+  background-color: orange;
 }
+
