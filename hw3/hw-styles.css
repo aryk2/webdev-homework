@@ -4,19 +4,284 @@ h1 {
 
 /* Code for exercise 01-flex */
 
+.one-flex-item {
+  width: 200px;
+  height: 100px;
+  margin: 1px;
+  padding: 10px;
+  background-color: purple;
+  color: white;
+  text-align: center;
+}
+
+.flex-container-1 {
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  align-content: flex-start;
+  flex-wrap: wrap-reverse;
+}
+
+section.flex-container-1 > .flex-item.item6 {
+  order: 3;
+}
+
+section.flex-container-1 > .flex-item.item8 {
+  order: 3;
+}
+
+section.flex-container-1 > .flex-item.item5 {
+  order: 3;
+}
+
+section.flex-container-1 > .flex-item.item3 {
+  order: 3;
+}
+
+section.flex-container-1 > .flex-item.item2 {
+  order: 3;
+}
+
+section.flex-container-1 > .flex-item.item1 {
+  order: 3;
+}
+
+section.flex-container-1 > .flex-item.item4 {
+  order: 2;
+}
+
+section.flex-container-1 > .flex-item.item7 {
+  order: 1;
+}
+
 /* Code for exercise 02-flex */
 
 .flex-container-2 {
   height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-content: space-around;
+  flex-wrap: wrap;
 }
+
+.flex-item {
+  margin: 1px;
+  padding: 10px;
+  background-color: purple;
+  color: white;
+  text-align: center;
+}
+
+section.flex-container-2 > .flex-item.item6 {
+  order: 7;
+}
+
+section.flex-container-2 > .flex-item.item8 {
+  order: 5;
+}
+
+section.flex-container-2 > .flex-item.item5 {
+  order: 8;
+}
+
+section.flex-container-2 > .flex-item.item3 {
+  order: 2;
+}
+
+section.flex-container-2 > .flex-item.item2 {
+  order: 3;
+}
+
+section.flex-container-2 > .flex-item.item1 {
+  order: 4;
+}
+
+section.flex-container-2 > .flex-item.item4 {
+  order: 1;
+}
+
+section.flex-container-2 > .flex-item.item7 {
+  order: 6;
+}
+
 
 /* Code for exercise 03-grid */
 
+.grid-item {
+  padding: 10px;
+  background-color: purple;
+  color: white;
+  text-align: center;
+  border: white;
+  border-style: solid;
+}
+
+/* Add your code here */
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 25% [col-start]);
+  grid-template-rows: repeat(8, 100px [row-start]);
+}
+
+section.grid-container-1 > .grid-item.item1 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+
+section.grid-container-1 > .grid-item.item2 {
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 3;
+  grid-row-end: 7;
+}
+
+section.grid-container-1 > .grid-item.item3 {
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+
+section.grid-container-1 > .grid-item.item4 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 4;
+  grid-row-end: 7;
+}
+
+section.grid-container-1 > .grid-item.item5 {
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 4;
+  grid-row-end: 7;
+}
+
+section.grid-container-1 > .grid-item.item6 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 7;
+  grid-row-end: 8;
+}
+
+section.grid-container-1 > .grid-item.item7 {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+section.grid-container-1 > .grid-item.item8 {
+  grid-column-start: 3;
+  grid-column-end: 5;
+  grid-row-start: 7;
+  grid-row-end: 8;
+}
+
 /* Code for exercise 04-grid */
+
+.grid-container-2 {
+  display: grid;
+  grid-template-columns: repeat(6, 16.6% [col-start]);
+  grid-template-rows: repeat(8, 100px [row-start]);
+}
+
+section.grid-container-2 > .grid-item.item1 {
+  grid-column-start: 1;
+  grid-column-end: 7;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+section.grid-container-2 > .grid-item.item2 {
+  grid-column-start: 1;
+  grid-column-end: 7;
+  grid-row-start: 2;
+  grid-row-end: 4;
+}
+
+section.grid-container-2 > .grid-item.item3 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 6;
+  grid-row-end: 8;
+  
+}
+
+section.grid-container-2 > .grid-item.item4 {
+  grid-column-start: 3;
+  grid-column-end: 5;
+  grid-row-start: 6;
+  grid-row-end: 8;
+}
+
+section.grid-container-2 > .grid-item.item5 {
+  grid-column-start: 5;
+  grid-column-end: 7;
+  grid-row-start: 6;
+  grid-row-end: 8;
+}
+
+section.grid-container-2 > .grid-item.item6 {
+  grid-column-start: 1;
+  grid-column-end: 7;
+  grid-row-start: 4;
+  grid-row-end: 6;
+}
+
+section.grid-container-2 > .grid-item.item7 {
+  grid-column-start: 1;
+  grid-column-end: 7;
+  grid-row-start: 8;
+  grid-row-end: 9;
+}
+
+@media only screen and (max-width: 768px) {
+  section.grid-container-2 > .grid-item.item3 {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 6;
+    grid-row-end: 8;
+    
+  }
+  
+  section.grid-container-2 > .grid-item.item4 {
+    grid-column-start: 4;
+    grid-column-end: 7;
+    grid-row-start: 6;
+    grid-row-end: 8;
+  }
+  
+  section.grid-container-2 > .grid-item.item5 {
+    visibility: hidden;
+  }
+}
+
+@media only screen and (max-width: 414px) {
+  section.grid-container-2 > .grid-item.item3 {
+    grid-column-start: 1;
+    grid-column-end: 7;
+    grid-row-start: 6;
+    grid-row-end: 7;
+    
+  }
+  
+  section.grid-container-2 > .grid-item.item4 {
+    grid-column-start: 1;
+    grid-column-end: 7;
+    grid-row-start: 7;
+    grid-row-end: 8;
+  }
+}
 
 /* Code for exercise 05-bootstrap-grid */
 
-.bootstrap-grid .row > * {
+.bootstrap-grid.row > * {
   height: 100px;
   border: 1px solid var(--white);
   padding: 10px;
