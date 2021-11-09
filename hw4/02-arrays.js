@@ -1,25 +1,42 @@
 let result = [];
 
 const insertItem = (item) => {
-  // insert item into result
+  result.push(item)
 
   return item;
 };
 
 const deleteItem = (item) => {
-  // remove the first occurrence of item in result
-
+  const index = result.indexOf(item);
+  if (index > -1) {
+    result.splice(index, 1);
+  }
+  
   return item;
 };
 
 const lookupItem = (index) => {
-  // return the item from result at index, deleting the obtained item
+  if (index < 0) {
+    return null
+  }
 
-  return index;
+  if(index < 0 || index < result.length) {
+    const item = result[index]
+    deleteItem(item)
+    return item
+  }
+
+  return null
+
 };
 
 const printItems = () => {
-  // return a string of the concatenated item in result, separated by commas
+  let string = ''
+
+  result.forEach(item => 
+    {string += (String(item)+', ')})
+
+  return string
 };
 
 insertItem(1);
@@ -28,7 +45,7 @@ insertItem(3);
 insertItem(2);
 insertItem(1);
 console.log(printItems());
-// expected: '1, 2, 3, 2, 1'
+expected: '1, 2, 3, 2, 1'
 console.log(lookupItem(1));
 // expected: 2
 console.log(printItems());

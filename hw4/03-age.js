@@ -1,5 +1,61 @@
+const getDate = (date) => {
+  try {
+    let dateFormatted = ''
+    if ( date.length === 3 ) {
+      dateFormatted = new Date(date[0], date[1], date[2])
+
+      if (dateFormatted !== 'Invalid Date')
+        return dateFormatted
+        
+      throw error
+    }
+    dateFormatted = new Date(date)
+
+    if (dateFormatted.toString() !== 'Invalid Date')
+      return dateFormatted
+    throw error
+  } catch (e) {
+    return -1
+  }
+}
+
 const calculateAge = (date1, date2) => {
-  // Given two dates, calculate and return the amount of time in between in years and months
+  let time1 = getDate(date1)
+  let time2 = getDate(date2)
+
+  if (time1 === -1 || time2 === -1)
+    return 'Error: Invalid input provided.'
+
+  time1 = time1.getTime()
+  time2 = time2.getTime()
+
+  let delta = 0
+
+  if (time1 > time2)
+    delta = time1 - time2
+  else 
+    delta = time2 - time1
+
+  monthIsh = (1000 * 3600 * 24 * 30)
+
+  let yearCount = 0
+  let monthCount = 0
+
+  while ( delta > monthIsh * 12) {
+    delta = delta - (monthIsh * 12)
+    yearCount += 1
+  }
+
+  while ( delta > monthIsh ) {
+    delta = delta - monthIsh
+    monthCount += 1
+  }
+
+  let result = ''
+  if (yearCount) result += String(yearCount)+' years, '
+  if (monthCount) result += String(monthCount)+' months'
+
+  return result
 };
 
 // Date() formats:
