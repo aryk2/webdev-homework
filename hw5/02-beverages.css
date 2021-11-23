@@ -12,3 +12,20 @@
   background-color: var(--purple);
   color: var(--white);
 }
+
+.text-center {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#item {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+#image {
+  width: 200px;
+  height: 200px;
+}
